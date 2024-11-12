@@ -4,77 +4,104 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
-<body>
-    <header>
+<body class="bg-light d-flex flex-column min-vh-100">
+    <header class="bg-dark-subtle">
+        <div class="bg-image d-flex justify-content-center align-items-center" style="background-image: url(../public/fog-7496901_1280.jpg); height: 20vh; background-position: bottom; background-size: cover;">
+            <h1 class="text-center p-3 text-dark-subtle">Fullstack-utveckling med ramverk <br>Moment 1</h1>
+        </div>
         <nav>
-            <ul>
-                <li><a href="index.html">Startsida</a></li>
-                <li><a href="bootsrap.html">Bootstrap</a></li>
-                <li><a href="tailwind.html">Tailwind</a></li>
-                <li><a href="publish.html">Publicering</a></li>
+            <ul class="nav justify-content-center p-3">
+                <li class="nav-item"><a class="nav-link text-dark" href="index.html">Startsida</a></li>
+                <li class="nav-item active"><a class="nav-link text-dark" href="bootsrap.html">Bootstrap</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="tailwind.html">Tailwind</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="publish.html">Publicering</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <h1>Bootstrap</h1>
-        <div>
-            <p>
-                Till stylingen för denna sida har ramverket Bootstrap använts. 
-
-
-                
-            </p>
+    <main class="container pt-3 mb-5">
+        <div class="pt-3 mb-5">
+            <h1>Bootstrap</h1>
+            <div class="pt-3 mb-5">
+                <p class="w-50 w-90-sm">
+                    Till stylingen för denna sida har ramverket Bootstrap använts.
+                    Vill du ta reda på mer information och och läsa dokumentation finns detta på deras webbplats, <a class="link-secondary" href="https://getbootstrap.com/" target="_blank">getbootstrap.com</a>. 
+                </p>
+            </div>
         </div>
 
-        <table>
-            <thead>
-                <td>Titel</td>
-                <td>Författare</td>
-                <td>Kommentar</td>
-                <td>Rekommenderad</td>
-                <td>Betyg</td>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Harry Potter och de vises sten</td>
-                    <td>J.K. Rowling</td>
-                    <td>Spännande och magisk berättelse om en ung pojke som får veta att han är en trollkarl. Perfekt för både barn och vuxna!</td>
-                    <td>Ja</td>
-                    <td>5 stjärnor</td>
-                </tr>
-                <tr>
-                    <td>Stolthet och fördom</td>
-                    <td>Jane Austen</td>
-                    <td>En underhållande klassiker fylld av skarpa iakttagelser och humor. Elizabeth Bennet och Mr. Darcy bjuder på romantik och kvicka dialoger samtidigt som boken utforskar teman som stolthet, fördomar och klass.</td>
-                    <td>Ja</td>
-                    <td>5 stjärnor</td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="pt-3 mb-5">
+            <h2>Tabell <br><small class="text-muted">Bokrecensioner</small></h2>
+            <table class="table table-light">
+                <thead>
+                    <tr>
+                        <th>Titel</th>
+                        <th>Författare</th>
+                        <th>Kommentar</th>
+                        <th>Rekommenderad</th>
+                        <th>Betyg</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Harry Potter och de vises sten</td>
+                        <td>J.K. Rowling</td>
+                        <td>Spännande och magisk berättelse om en ung pojke som får veta att han är en trollkarl. Perfekt för både barn och vuxna!</td>
+                        <td>Ja</td>
+                        <td>5 stjärnor</td>
+                    </tr>
+                    <tr>
+                        <td>Stolthet och fördom</td>
+                        <td>Jane Austen</td>
+                        <td>En underhållande klassiker fylld av skarpa iakttagelser och humor. Elizabeth Bennet och Mr. Darcy bjuder på romantik och kvicka dialoger samtidigt som boken utforskar teman som stolthet, fördomar och klass.</td>
+                        <td>Ja</td>
+                        <td>5 stjärnor</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
-        <form action="">
-            <label for="title">Bokens titel</label>
-            <input type="text" id="title">
-            <label for="author">Författare</label>
-            <input type="text" id="author">
-            <label for="review">Kommentar</label>
-            <textarea name="text" id="review"></textarea>
-            <label for="recommend">Rekommenderas</label>
-            <input type="checkbox" id="recommend">
-            <label for="grade">Betyg</label>
-            <select name="grade" id="grade">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-            </select>
-        </form>
+        <div class="pt-3 mb-5">
+            <h2>Formulär</h2>
+            <form action="" class="w-50 contatiner pt-3 mb-5">
+                <div class="mb-3 form-group">
+                    <label class="form-label" for="title">Bokens titel</label>
+                    <input class="form-control" type="text" id="title">
+                </div>
+                <div class="mb-3 form-group">
+                    <label  class="form-label" for="author">Författare</label>
+                    <input class="form-control" type="text" id="author">
+                </div>
+                <div class="mb-3 form-group">
+                    <label class="form-label" for="review">Kommentar</label>
+                    <textarea class="form-control" name="text" id="review"></textarea>
+                </div>
+                <div class="row ">
+                    <div class="col-auto form-group m-auto">
+                        <label class="form-label" for="grade">Betyg</label>
+                        <select class="form-select" name="grade" id="grade">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div class="col-auto form-check form-group m-auto">
+                        <label class="form-check-label" for="recommend">Rekommenderas</label>
+                        <input class="form-check-input" type="checkbox" id="recommend">
+                    </div>
+                    
+                </div>
+                <button class="btn btn-dark" type="submit">Skicka</button>
+            </form>
+        </div>
     </main>
-    <footer>
+    <footer class="text-center pt-4 bg-dark-subtle mt-auto">
         <p>Laborationsuppgift för kursen DT193G, Fullstack-utveckling med ramverk</p>
         <p>2024 Emma Ådahl Görling</p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
