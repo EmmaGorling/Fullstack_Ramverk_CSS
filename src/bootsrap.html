@@ -12,14 +12,69 @@
                 <li><a href="index.html">Startsida</a></li>
                 <li><a href="bootsrap.html">Bootstrap</a></li>
                 <li><a href="tailwind.html">Tailwind</a></li>
+                <li><a href="publish.html">Publicering</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <h1>Bootstrap</h1>
+        <div>
+            <p>
+                Till stylingen för denna sida har ramverket Bootstrap använts. 
+
+
+                
+            </p>
+        </div>
+
+        <table>
+            <thead>
+                <td>Titel</td>
+                <td>Författare</td>
+                <td>Kommentar</td>
+                <td>Rekommenderad</td>
+                <td>Betyg</td>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Harry Potter och de vises sten</td>
+                    <td>J.K. Rowling</td>
+                    <td>Spännande och magisk berättelse om en ung pojke som får veta att han är en trollkarl. Perfekt för både barn och vuxna!</td>
+                    <td>Ja</td>
+                    <td>5 stjärnor</td>
+                </tr>
+                <tr>
+                    <td>Stolthet och fördom</td>
+                    <td>Jane Austen</td>
+                    <td>En underhållande klassiker fylld av skarpa iakttagelser och humor. Elizabeth Bennet och Mr. Darcy bjuder på romantik och kvicka dialoger samtidigt som boken utforskar teman som stolthet, fördomar och klass.</td>
+                    <td>Ja</td>
+                    <td>5 stjärnor</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <form action="">
+            <label for="title">Bokens titel</label>
+            <input type="text" id="title">
+            <label for="author">Författare</label>
+            <input type="text" id="author">
+            <label for="review">Kommentar</label>
+            <textarea name="text" id="review"></textarea>
+            <label for="recommend">Rekommenderas</label>
+            <input type="checkbox" id="recommend">
+            <label for="grade">Betyg</label>
+            <select name="grade" id="grade">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </form>
     </main>
     <footer>
-
+        <p>Laborationsuppgift för kursen DT193G, Fullstack-utveckling med ramverk</p>
+        <p>2024 Emma Ådahl Görling</p>
     </footer>
 </body>
 </html>
