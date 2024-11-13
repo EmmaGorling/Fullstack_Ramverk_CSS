@@ -4,77 +4,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tailwind</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Startsida</a></li>
-                <li><a href="bootsrap.html">Bootstrap</a></li>
-                <li><a href="tailwind.html">Tailwind</a></li>
-                <li><a href="publish.html">Publicering</a></li>
+        <div class="bg-cover bg-bottom min-h-44 flex-col items-center" style="background-image: url(../public/fog-7496901_1280.jpg); height: 30vh;">
+            <h1 class="text-slate-100 text-2xl font-semibold text-center py-12">Fullstack-utveckling med ramverk <br>Moment 1</h1>
+        </div>
+        <nav class="bg-zinc-300 py-5">
+            <ul class="font-semibold text-center">
+                <li class="hover:underline inline-block mx-2"><a href="index.html">Startsida</a></li>
+                <li class="hover:underline inline-block mx-2"><a href="bootstrap.html">Bootstrap</a></li>
+                <li class="hover:underline inline-block mx-2"><a href="tailwind.html">Tailwind</a></li>
+                <li class="hover:underline inline-block mx-2"><a href="publish.html">Publicering</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <h1>Tailwind</h1>
+    <main class="px-2 py-5">
+        <h1 class="text-2xl font-bold text-center mb-4">Tailwind</h1>
 
-        <div>
+        <div class="mb-4">
+            <h2 class="text-xl font-semibold mb-2">Om Tailwind och att jobba med det</h2>
             <p>
                 Till stylingen för denna sida har ramverket Tailwind använts. 
 
 
-                
+                Vill du ta reda på mer information och och läsa dokumentation finns detta på deras webbplats, <a class="" href="https://tailwindcss.com/" target="_blank">tailwindcss.com</a>.
             </p>
         </div>
 
-        <table>
-            <thead>
-                <td>Titel</td>
-                <td>Författare</td>
-                <td>Kommentar</td>
-                <td>Rekommenderad</td>
-                <td>Betyg</td>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Harry Potter och de vises sten</td>
-                    <td>J.K. Rowling</td>
-                    <td>Spännande och magisk berättelse om en ung pojke som får veta att han är en trollkarl. Perfekt för både barn och vuxna!</td>
-                    <td>Ja</td>
-                    <td>5 stjärnor</td>
-                </tr>
-                <tr>
-                    <td>Stolthet och fördom</td>
-                    <td>Jane Austen</td>
-                    <td>En underhållande klassiker fylld av skarpa iakttagelser och humor. Elizabeth Bennet och Mr. Darcy bjuder på romantik och kvicka dialoger samtidigt som boken utforskar teman som stolthet, fördomar och klass.</td>
-                    <td>Ja</td>
-                    <td>5 stjärnor</td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="my-4">
+            <h2 class="text-xl font-semibold my-2">Tabell <br>Bokrecensioner</h2>
+            <table class="table-auto divide-y divide-zinc-300">
+                <thead class="">
+                    <td>Titel</td>
+                    <td>Författare</td>
+                    <td>Kommentar</td>
+                    <td>Rekommenderad</td>
+                    <td>Betyg</td>
+                </thead>
+                <tbody class="divide-y divide-zinc-300">
+                    <tr>
+                        <td>Harry Potter och de vises sten</td>
+                        <td>J.K. Rowling</td>
+                        <td>Spännande och magisk berättelse om en ung pojke som får veta att han är en trollkarl. Perfekt för både barn och vuxna!</td>
+                        <td>Ja</td>
+                        <td>5 stjärnor</td>
+                    </tr>
+                    <tr>
+                        <td>Stolthet och fördom</td>
+                        <td>Jane Austen</td>
+                        <td>En underhållande klassiker fylld av skarpa iakttagelser och humor. Elizabeth Bennet och Mr. Darcy bjuder på romantik och kvicka dialoger samtidigt som boken utforskar teman som stolthet, fördomar och klass.</td>
+                        <td>Ja</td>
+                        <td>5 stjärnor</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
-        <form action="">
-            <label for="title">Bokens titel</label>
-            <input type="text" id="title">
-            <label for="author">Författare</label>
-            <input type="text" id="author">
-            <label for="review">Kommentar</label>
-            <textarea name="text" id="review"></textarea>
-            <label for="recommend">Rekommenderas</label>
-            <input type="checkbox" id="recommend">
-            <label for="grade">Betyg</label>
-            <select name="grade" id="grade">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-            </select>
-            <button type="submit">Skicka</button>
-        </form>
+        <div class="my-4">
+            <h2 class="text-xl font-semibold my-2">Formulär <br>Lägg till bokrecension</h2>
+            <form action="" id="bookForm" class="">
+                <div class="">
+                    <label class="" for="title">Bokens titel</label>
+                    <input class="" type="text" id="title">
+                </div>
+                <div class="">
+                    <label  class="" for="author">Författare</label>
+                    <input class="" type="text" id="author">
+                </div>
+                <div class="">
+                    <label class="" for="review">Kommentar</label>
+                    <textarea class="" name="text" id="review"></textarea>
+                </div>
+                <div class="">
+                    <div class="">
+                        <label class="" for="grade">Betyg</label>
+                        <select class="" name="grade" id="grade">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div class="">
+                        <label class="" for="recommend">Rekommenderas</label>
+                        <input class="" type="checkbox" id="recommend">
+                    </div>
+                    <button class="" type="submit">Skicka</button>
+                </div>
+                <div class="text-rose-600" id="errorMsg" ></div>
+                
+            </form>
+        </div>
     </main>
-    <footer>
+    <footer class="bg-zinc-300 text-center px-2 py-6">
         <p>Laborationsuppgift för kursen DT193G, Fullstack-utveckling med ramverk</p>
         <p>2024 Emma Ådahl Görling</p>
     </footer>

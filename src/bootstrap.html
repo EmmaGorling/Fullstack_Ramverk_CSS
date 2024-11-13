@@ -13,18 +13,19 @@
             <h1 class="text-break text-center text-light">Fullstack-utveckling med ramverk <br>Moment 1</h1>
         </div>
         <nav>
-            <ul class="nav justify-content-center p-3">
+            <ul class="nav justify-content-center pt-3 pb-3">
                 <li class=""><a class="nav-link text-dark" href="index.html">Startsida</a></li>
-                <li class=""><a class="nav-link text-dark" href="bootsrap.html">Bootstrap</a></li>
+                <li class=""><a class="nav-link text-dark" href="bootstrap.html">Bootstrap</a></li>
                 <li class=""><a class="nav-link text-dark" href="tailwind.html">Tailwind</a></li>
                 <li class=""><a class="nav-link text-dark" href="publish.html">Publicering</a></li>
             </ul>
         </nav>
     </header>
     <main class="p-3 bg-light">
-        <div class="">
+        <div class="mb-4">
             <h1>Bootstrap</h1>
             <div class="">
+                <h2>Om Bootstrap och att jobba med det</h2>
                 <p class="">
                     Till stylingen för denna sida har ramverket Bootstrap använts.
                     Vill du ta reda på mer information och och läsa dokumentation finns detta på deras webbplats, <a class="link-secondary" href="https://getbootstrap.com/" target="_blank">getbootstrap.com</a>. 
@@ -32,56 +33,58 @@
             </div>
         </div>
 
-        <div class="">
+        <div class="mb-4">
             <h2>Tabell <br><small class="text-muted">Bokrecensioner</small></h2>
-            <table class="table ">
-                <thead>
-                    <tr>
-                        <th>Titel</th>
-                        <th>Författare</th>
-                        <th>Kommentar</th>
-                        <th>Rekommenderad</th>
-                        <th>Betyg</th>
-                    </tr>
-                </thead>
-                <tbody id="tableBody">
-                    <tr>
-                        <td>Harry Potter och de vises sten</td>
-                        <td>J.K. Rowling</td>
-                        <td>Spännande och magisk berättelse om en ung pojke som får veta att han är en trollkarl. Perfekt för både barn och vuxna!</td>
-                        <td>Ja</td>
-                        <td>5 stjärnor</td>
-                    </tr>
-                    <tr>
-                        <td>Stolthet och fördom</td>
-                        <td>Jane Austen</td>
-                        <td>En underhållande klassiker fylld av skarpa iakttagelser och humor. Elizabeth Bennet och Mr. Darcy bjuder på romantik och kvicka dialoger samtidigt som boken utforskar teman som stolthet, fördomar och klass.</td>
-                        <td>Ja</td>
-                        <td>5 stjärnor</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="table-responsive p-">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Titel</th>
+                            <th>Författare</th>
+                            <th>Kommentar</th>
+                            <th>Rekommenderad</th>
+                            <th>Betyg</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                        <tr>
+                            <td>Harry Potter och de vises sten</td>
+                            <td>J.K. Rowling</td>
+                            <td>Spännande och magisk berättelse om en ung pojke som får veta att han är en trollkarl. Perfekt för både barn och vuxna!</td>
+                            <td>Ja</td>
+                            <td>5 stjärnor</td>
+                        </tr>
+                        <tr>
+                            <td>Stolthet och fördom</td>
+                            <td>Jane Austen</td>
+                            <td>En underhållande klassiker fylld av skarpa iakttagelser och humor. Elizabeth Bennet och Mr. Darcy bjuder på romantik och kvicka dialoger samtidigt som boken utforskar teman som stolthet, fördomar och klass.</td>
+                            <td>Ja</td>
+                            <td>5 stjärnor</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
 
         <div class="">
             <h2>Formulär <br><small class="text-muted">Lägg till bokrecension</small></h2>
-            <form action="" id="bookForm" class="">
-                <div class="">
+            <form action="" id="bookForm" class="p-3 conatiner">
+                <div class="form-group ">
                     <label class="" for="title">Bokens titel</label>
-                    <input class="" type="text" id="title">
+                    <input class="form-control" type="text" id="title">
                 </div>
-                <div class="">
+                <div class="form-group">
                     <label  class="" for="author">Författare</label>
-                    <input class="" type="text" id="author">
+                    <input class="form-control" type="text" id="author">
                 </div>
-                <div class="">
+                <div class="form-group">
                     <label class="" for="review">Kommentar</label>
-                    <textarea class="" name="text" id="review"></textarea>
+                    <textarea class="form-control" name="text" id="review"></textarea>
                 </div>
-                <div class="">
-                    <div class="">
+                <div class="form-group row">
+                    <div class="form-group col-auto">
                         <label class="" for="grade">Betyg</label>
-                        <select class="" name="grade" id="grade">
+                        <select class="form-select" name="grade" id="grade">
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -89,13 +92,14 @@
                             <option value="5">5</option>
                         </select>
                     </div>
-                    <div class="">
-                        <label class="" for="recommend">Rekommenderas</label>
-                        <input class="" type="checkbox" id="recommend">
+                    <div class="form-group col-auto">
+                        <label class="form-check-label" for="recommend">Rekommenderas</label>
+                        <input class="form-check-input" type="checkbox" id="recommend">
                     </div>
+                    <button class="btn bg-secondary-subtle btn-outline-secondary text-dark col-auto" type="submit">Skicka</button>
                 </div>
                 <div class="text-danger" id="errorMsg" ></div>
-                <button class="" type="submit">Skicka</button>
+                
             </form>
         </div>
     </main>
