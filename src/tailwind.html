@@ -20,21 +20,32 @@
             </ul>
         </nav>
     </header>
-    <main class="px-2 py-5">
-        <h1 class="text-2xl font-bold text-center mb-4">Tailwind</h1>
+    <main class="px-2 py-5 bg-gray-50">
+        <h1 class="text-4xl font-bold text-center mb-4">Tailwind</h1>
 
         <div class="mb-4">
-            <h2 class="text-xl font-semibold mb-2">Om Tailwind och att jobba med det</h2>
+            <h2 class="text-2xl font-semibold mb-2">Om Tailwind</h2>
             <p>
                 Till stylingen för denna sida har ramverket Tailwind använts. 
+                <br>
+                Tailwind är ett utility-first CSS-ramverk som återanvänder små, återanvändbara klasser som kan användas till HTML-elementen.
+                Eftersom Tailwind inte har fördefinierade komponenter, som till exempel Bootstrap har, får utvecklaren större möjligheter att göra mer anpassade gränssnitt.
+                Det har även stöd för responsiv design, som gör det enkelt att skapa webbplatser som fungerar bra på både små och stora skärmar.
+                <br>
+                Vill du ta reda på mer information och och läsa dokumentation finns detta på deras webbplats, <a class="underline" href="https://tailwindcss.com/" target="_blank">tailwindcss.com</a>.
+            </p>
+        </div>
 
-
-                Vill du ta reda på mer information och och läsa dokumentation finns detta på deras webbplats, <a class="" href="https://tailwindcss.com/" target="_blank">tailwindcss.com</a>.
+        <div class="mb-4">
+            <h2 class="text-2xl font-semibold mb-2">Att jobba med Tailwind</h2>
+            <p>
+                Tailwind känns relativt enkelt att jobba med och det är mycket tack vare dokumentationen.
+                Det är lätt att hitta det man söker och det är relativt enkelt att förstå hur man ska använda det.
             </p>
         </div>
 
         <div class="my-4">
-            <h2 class="text-xl font-semibold my-2">Tabell <br>Bokrecensioner</h2>
+            <h2 class="text-2xl font-semibold my-3">Tabell <br><span class="text-xl text-zinc-700">Bokrecensioner</span></h2>
             <table class="table-auto divide-y divide-zinc-300">
                 <thead class="">
                     <td>Titel</td>
@@ -63,24 +74,24 @@
         </div>
 
         <div class="my-4">
-            <h2 class="text-xl font-semibold my-2">Formulär <br>Lägg till bokrecension</h2>
+            <h2 class="text-2xl font-semibold my-3">Formulär <br><span class="text-xl text-zinc-700">Lägg till bokrecension</span></h2>
             <form action="" id="bookForm" class="">
                 <div class="">
                     <label class="" for="title">Bokens titel</label>
-                    <input class="" type="text" id="title">
+                    <input class="border border-zinc-300 rounded" type="text" id="title">
                 </div>
                 <div class="">
                     <label  class="" for="author">Författare</label>
-                    <input class="" type="text" id="author">
+                    <input class="border border-zinc-300 rounded" type="text" id="author">
                 </div>
                 <div class="">
                     <label class="" for="review">Kommentar</label>
-                    <textarea class="" name="text" id="review"></textarea>
+                    <textarea class="border border-zinc-300 rounded" name="text" id="review"></textarea>
                 </div>
                 <div class="">
                     <div class="">
                         <label class="" for="grade">Betyg</label>
-                        <select class="" name="grade" id="grade">
+                        <select class="border border-zinc-300 rounded" name="grade" id="grade">
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -90,9 +101,9 @@
                     </div>
                     <div class="">
                         <label class="" for="recommend">Rekommenderas</label>
-                        <input class="" type="checkbox" id="recommend">
+                        <input class="border border-zinc-300 rounded" type="checkbox" id="recommend">
                     </div>
-                    <button class="" type="submit">Skicka</button>
+                    <button class="border border-zinc-500 bg-zinc-300 rounded px-2" type="submit">Skicka</button>
                 </div>
                 <div class="text-rose-600" id="errorMsg" ></div>
                 
