@@ -4,36 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Startsida</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
 </head>
-<body>
-    <header>
-        <div class="" style="background-image: url(../public/fog-7496901_1280.jpg);">
-            <h1 class="">Fullstack-utveckling med ramverk <br>Moment 1</h1>
+<body class="" style="min-height: 100vh; display: grid;grid-template-rows: auto 1fr auto;">
+    <header class="">
+        <div class="" style="background-image: url(../public/fog-7496901_1280.jpg); height: 30vh; min-height: 180px; background-position: bottom; background-size: cover;">
+            <h1 class="title is-1 has-text-white has-text-centered ">Fullstack-utveckling med ramverk <br>Moment 1</h1>
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Startsida</a></li>
-                <li><a href="bootstrap.html">Bootstrap</a></li>
-                <li><a href="tailwind.html">Tailwind</a></li>
-                <li><a href="publish.html">Publicering</a></li>
+        <nav class="has-background-grey-lighter menu has-text-centered p-3">
+            <ul class="">
+                <li class="p-3" style="display: inline-block;"><a class="has-text-dark has-text-weight-medium" href="index.html">Startsida</a></li>
+                <li class="p-3" style="display: inline-block;"><a class="has-text-dark has-text-weight-medium" href="bootstrap.html">Bootstrap</a></li>
+                <li class="p-3" style="display: inline-block;"><a class="has-text-dark has-text-weight-medium" href="tailwind.html">Tailwind</a></li>
+                <li class="p-3" style="display: inline-block;"><a class="has-text-dark has-text-weight-medium" href="publish.html">Publicering</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <h1>Startsida</h1>
+    <main class="has-background-light p-3">
+        <div class="has-text-centered pt-3 pb-4">
+            <h1 class="title is-1">Startsida</h1>
+        </div>
 
-        <div>
+        <div class="block">
+            <h2 class="title is-3">Beskrivning av momentet</h2>
             <p>
                 I kursens första moment ska vi bekanta oss med ramverk för CSS.
                 <br>
-                I momentet ska två undersidor skapas där dessa undersidor som ska innehålla information om ramverket som använts, hur det har gått, samt en tabell med ett formulär kopplat till. 
+                I momentet ska två undersidor skapas, i dessa sidor ska det finnas information om ramverket som använts, hur det har gått, en tabell, samt ett formulär som är kopplat till tabellen. 
                 Dessa sidor ska sedan stylas med de CSS-ramverk som valts.
-                
-                Jag har valt att använda Bootstrap och Tailwind då dessa är de populäraste ramverken just nu.
+                <br>
+                Jag har valt att använda Bootstrap och Tailwind till undersidorna, då dessa är de populäraste ramverken just nu.
+            </p>
+        </div>
+
+        <div class="block">
+            <h2 class="title is-3">Om startsidan</h2>
+            <p>
+                Istället för att style denna sidan med vanlig CSS valde jag använda Bulma, för att jag ville testa några fler ramverk.
+                <br>
+                Mer information om Bulma hittar du på deras webbplats, <a href="https://bulma.io/">bulma.io</a>
+                <br>
+                Bulma känns som ett väldigt "litet" ramverk och jag kan tycka att det är väldigt svårt att hitta simpla saker i dokumentationen.
+                Till exempel försökte jag få till att footern skulle hålla sig längst ner på sidan, trots lite innehåll, men jag kan inte hitta det någonstans 
+                och gick över till att skriva stylingen direkt i elementet för att få till detta. Även navigeringen var svår att få till utan att använda "style"-attributet i taggarna.
+                 
             </p>
         </div>
     </main>
-    <footer>
+    <footer class="has-background-grey-lighter has-text-centered p-4" >
         <p>Laborationsuppgift för kursen DT193G, Fullstack-utveckling med ramverk</p>
         <p>2024 Emma Ådahl Görling</p>
     </footer>
