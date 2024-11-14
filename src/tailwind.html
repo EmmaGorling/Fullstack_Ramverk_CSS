@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tailwind</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./js/form.js" defer></script>
 </head>
 <body>
     <header>
@@ -20,10 +21,10 @@
             </ul>
         </nav>
     </header>
-    <main class="px-2 py-5 bg-gray-50">
+    <main class="px-4 py-5 bg-gray-50 flex flex-col items-center">
         <h1 class="text-4xl font-bold text-center mb-4">Tailwind</h1>
 
-        <div class="mb-4">
+        <div class="mb-4 max-w-2xl">
             <h2 class="text-2xl font-semibold mb-2">Om Tailwind</h2>
             <p>
                 Till stylingen för denna sida har ramverket Tailwind använts. 
@@ -36,7 +37,8 @@
             </p>
         </div>
 
-        <div class="mb-4">
+
+        <div class="mb-4 max-w-2xl">
             <h2 class="text-2xl font-semibold mb-2">Att jobba med Tailwind</h2>
             <p>
                 Tailwind känns relativt enkelt att jobba med och det är mycket tack vare dokumentationen.
@@ -44,66 +46,66 @@
             </p>
         </div>
 
-        <div class="my-4">
+        <span class="w-full h-0.5 bg-gray-200 my-4"></span>
+
+        <div class="my-4 max-w-2xl">
             <h2 class="text-2xl font-semibold my-3">Tabell <br><span class="text-xl text-zinc-700">Bokrecensioner</span></h2>
-            <table class="table-auto divide-y divide-zinc-300">
+            <table class="table-auto w-full divide-y divide-zinc-300">
                 <thead class="">
-                    <td>Titel</td>
-                    <td>Författare</td>
-                    <td>Kommentar</td>
-                    <td>Rekommenderad</td>
-                    <td>Betyg</td>
-                </thead>
-                <tbody class="divide-y divide-zinc-300">
-                    <tr>
-                        <td>Harry Potter och de vises sten</td>
-                        <td>J.K. Rowling</td>
-                        <td>Spännande och magisk berättelse om en ung pojke som får veta att han är en trollkarl. Perfekt för både barn och vuxna!</td>
-                        <td>Ja</td>
-                        <td>5 stjärnor</td>
+                    <tr class="">
+                        <th class="font-semibold">Namn</td>
+                        <th class="font-semibold">Sysselsättning</td>
+                        <th class="font-semibold">Ålder</td>
+                        <th class="font-semibold">Har du husdjur</td>
                     </tr>
-                    <tr>
-                        <td>Stolthet och fördom</td>
-                        <td>Jane Austen</td>
-                        <td>En underhållande klassiker fylld av skarpa iakttagelser och humor. Elizabeth Bennet och Mr. Darcy bjuder på romantik och kvicka dialoger samtidigt som boken utforskar teman som stolthet, fördomar och klass.</td>
-                        <td>Ja</td>
-                        <td>5 stjärnor</td>
+                </thead>
+                <tbody class="divide-y divide-zinc-300" id="tableBody">
+                    <tr class="[&>*]:px-2">
+                        <td class="">Emma Ådahl Görling</td>
+                        <td>Webbutvecklingsstudent</td>
+                        <td class="text-center">30-39</td>
+                        <td class="text-center">Ja</td>
+                    </tr>
+                    <tr class="[&>*]:px-2">
+                        <td>Rasmus</td>
+                        <td>Arbetsledare</td>
+                        <td class="text-center">30-39</td>
+                        <td class="text-center">Ja</td>
                     </tr>
                 </tbody>
             </table>
         </div>
 
-        <div class="my-4">
+        <div class="my-4 max-w-xs md: w-70">
             <h2 class="text-2xl font-semibold my-3">Formulär <br><span class="text-xl text-zinc-700">Lägg till bokrecension</span></h2>
-            <form action="" id="bookForm" class="">
-                <div class="">
-                    <label class="" for="title">Bokens titel</label>
-                    <input class="border border-zinc-300 rounded" type="text" id="title">
+            <form action="" id="form" class="">
+                <div class="my-3">
+                    <label class="" for="name">Namn</label>
+                    <input class="border border-zinc-300 rounded w-full" type="text" id="name">
                 </div>
-                <div class="">
-                    <label  class="" for="author">Författare</label>
-                    <input class="border border-zinc-300 rounded" type="text" id="author">
+                <div class="my-3">
+                    <label class="" for="work">Work</label>
+                    <textarea class="border border-zinc-300 rounded w-full" name="work" id="work"></textarea>
                 </div>
-                <div class="">
-                    <label class="" for="review">Kommentar</label>
-                    <textarea class="border border-zinc-300 rounded" name="text" id="review"></textarea>
-                </div>
-                <div class="">
-                    <div class="">
-                        <label class="" for="grade">Betyg</label>
-                        <select class="border border-zinc-300 rounded" name="grade" id="grade">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
+                <div class="flex justify-center my-3 w-full">
+                    <div class="flex flex-col mx-3 text-center">
+                        <label class="" for="age">Ålder</label>
+                        <select class="border border-zinc-300 rounded" name="age" id="age">
+                            <option value="1">&lt; 20</option>
+                            <option value="2">20-29</option>
+                            <option value="3">30-39</option>
+                            <option value="4">40-49</option>
+                            <option value="5">50-59</option>
+                            <option value="6">&gt; 60</option>
                         </select>
                     </div>
-                    <div class="">
-                        <label class="" for="recommend">Rekommenderas</label>
-                        <input class="border border-zinc-300 rounded" type="checkbox" id="recommend">
+                    <div class="flex flex-col mx-3">
+                        <label class="" for="pet">Har du husdjur</label>
+                        <input class="border border-zinc-300 rounded mt-1" type="checkbox" id="pet">
                     </div>
-                    <button class="border border-zinc-500 bg-zinc-300 rounded px-2" type="submit">Skicka</button>
+                </div>
+                <div class="flex justify-center items-center mt-6">
+                    <button class="border border-zinc-500 bg-zinc-300 rounded px-2 " type="submit">Skicka</button>
                 </div>
                 <div class="text-rose-600" id="errorMsg" ></div>
                 
