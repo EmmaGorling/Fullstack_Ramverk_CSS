@@ -4,61 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Publicering</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
 </head>
-<body>
+<body style="min-height: 100vh; display: grid;grid-template-rows: auto 1fr auto;">
     <header>
-        <div class="" style="background-image: url(../public/fog-7496901_1280.jpg);">
-            <h1 class="">Fullstack-utveckling med ramverk <br>Moment 1</h1>
+        <div class="py-6" style="background-image: url(../public/fog-7496901_1280.jpg); height: 30vh; min-height: 180px; background-position: bottom; background-size: cover;">
+            <h1 class="title is-size-1-tablet has-text-white has-text-centered ">Fullstack-utveckling med ramverk <br>Moment 1</h1>
         </div>
-        <nav>
+        <nav class="has-background-grey-lighter menu has-text-centered py-3">
             <ul>
-                <li><a href="index.html">Startsida</a></li>
-                <li><a href="bootstrap.html">Bootstrap</a></li>
-                <li><a href="tailwind.html">Tailwind</a></li>
-                <li><a href="publish.html">Publicering</a></li>
+                <li class="p-3" style="display: inline-block;"><a class="has-text-dark has-text-weight-medium" href="index.html">Startsida</a></li>
+                <li class="p-3" style="display: inline-block;"><a class="has-text-dark has-text-weight-medium" href="bootstrap.html">Bootstrap</a></li>
+                <li class="p-3" style="display: inline-block;"><a class="has-text-dark has-text-weight-medium" href="tailwind.html">Tailwind</a></li>
+                <li class="p-3" style="display: inline-block;"><a class="has-text-dark has-text-weight-medium" href="publish.html">Publicering</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <h1>Publicering</h1>
-        <p>
-            Vanligtvis publicerar jag i princip allt som hör till skolan via Netlify, jag tycker det är väldigt smidigt och jag har lärt mig skapligt hur det fungerar.
-            <br>
-            Men för det här momentet tänkte jag att skulle prova något annat. Först testade jag GitHub Pages, det verkade gå smidigt och bra att deploya,
-            fram till att jag skulle besöka sidan. Då står det 404 och att det inte finns någon index.html-fil och strax därefter fick jag ett mail om att deployen inte fungerade.
-            Jag försökte hitta vad det kunde bero på, men hittade inte anledningen.
-            <br>
-            Därefter testade jag Render, men av någon anledning fungerar inte det heller. Jag får bara upp deploy failed..
-            <br>
-            Och gissa vad som fungerade direkt, utan några kosntigheter eller knussel? Jo självklart Netlify!
-            Så jag gjorde en deploy därifrån men kände att jag ville ändå försöka publicera det via en annan plattform.
-            Så jag testade även Vercel, som jag aldrig har testat innan, och fick till det där med.
-        </p>
+    <main  class="has-background-light p-3 pb-5">
+        <div class="has-text-centered pt-3 pb-4 container">
+            <h1 class="title is-1">Publicering</h1>
+        </div>
+        
+        <div class="block container ">
+            <p>
+                Vanligtvis publicerar jag i princip allt som hör till skolan via Netlify, jag tycker det är väldigt smidigt och jag har lärt mig skapligt hur det fungerar.
+                <br>
+                Men för det här momentet tänkte jag att skulle prova något annat. Först testade jag GitHub Pages, det verkade gå smidigt och bra att deploya,
+                fram till att jag skulle besöka sidan. Då står det 404 och att det inte finns någon index.html-fil och strax därefter fick jag ett mail om att deployen inte fungerade.
+                Jag försökte hitta vad det kunde bero på, men hittade inte anledningen.
+                <br>
+                Därefter testade jag Render, men av någon anledning fungerar inte det heller. Jag får bara upp deploy failed..
+                <br>
+                Och gissa vad som fungerade direkt, utan några kosntigheter eller knussel? Jo självklart Netlify!
+                Så jag gjorde en deploy därifrån men kände att jag ville ändå försöka publicera det via en annan plattform.
+                Så jag testade även Vercel, som jag aldrig har testat innan, och fick till det där med.
+            </p>
+        
+        </div>
 
-        <h2>Netlify</h2>
-        <p>
-            Netlify är en populär plattform som används för att bygga  och publicera webbplatser och webbapplikationer.
-            Med Netlify finns det möjlighet att koppla sitt versionshanteringssystem (t ex. GitHub eller GitLab) och 
-            därmed också göra deploys direkt från sitt repositrory. 
-            När man sedan gör en ny push till sitt repo kommer den publicerade sidan automatiskt uppdateras med den nya versionen.
-            För små hobby-projekt kostar det ingenting att använda Netlify, men det finns även betalplaner för större prjekt.
-            Netlify har stort stöd för olika programmeringsspråk och utvecklingsverktyg: HTML, CSS, JavaScript, Node.js 
-            TypeScript, Python, PHP med flera. 
-            <br>
-            <br>
-            För att lägga till en ny webbplats med Netlify går man till "Add new site" från startsidan (när man är inloggad).
-            I den menyn kan man välja hur webbplatsen ska skapas, för att använda till exempel GitHub väljs "Import an existing project".
-            Efter inloggning till git-plattformen väljer man det repo som ska publiceras ohc därefter ska eventuella inställningar läggas till.
-            Sedan är det bara att trycka på Deploy och vänta på att webbplatsen skapas och går online.
-        </p>
+        <div class="block container ">
+            <h2 class="title is-3">Netlify</h2>
+            <p>
+                Netlify är en populär plattform som används för att bygga  och publicera webbplatser och webbapplikationer.
+                Med Netlify finns det möjlighet att koppla sitt versionshanteringssystem (t ex. GitHub eller GitLab) och 
+                därmed också göra deploys direkt från sitt repositrory. 
+                När man sedan gör en ny push till sitt repo kommer den publicerade sidan automatiskt uppdateras med den nya versionen.
+                För små hobby-projekt kostar det ingenting att använda Netlify, men det finns även betalplaner för större prjekt.
+                Netlify har stort stöd för olika programmeringsspråk och utvecklingsverktyg: HTML, CSS, JavaScript, Node.js 
+                TypeScript, Python, PHP med flera. 
+                <br>
+                <br>
+                För att lägga till en ny webbplats med Netlify går man till "Add new site" från startsidan (när man är inloggad).
+                I den menyn kan man välja hur webbplatsen ska skapas, för att använda till exempel GitHub väljs "Import an existing project".
+                Efter inloggning till git-plattformen väljer man det repo som ska publiceras ohc därefter ska eventuella inställningar läggas till.
+                Sedan är det bara att trycka på Deploy och vänta på att webbplatsen skapas och går online.
+            </p>
+        </div>
 
-        <h2>Vercel</h2>
-        <p>
-            Vercel är en plattform för hosting och utveckling av webbapplikationer, som är särskilt optimerad för frontend-ramverk.
-            
-        </p>
+        <div class="block container ">
+            <h2 class="title is-3">Vercel</h2>
+            <p>
+                Vercel är en plattform för hosting och utveckling av webbapplikationer, som är särskilt optimerad för frontend-ramverk.
+                Det finns möjlighet att även till Vercel koppla sin versionshanteringsplattform, för att på ett smidigt sätt kunna deploya 
+                sina projekt direkt från ett repositrory. Precis som med Netlify är det gratis att använda Vercel för mindre hobbyprojekt.
+                Om man däremot ska publicera större projekt kan man behöva teckna upp sig på en betalplan.
+                <br><br>
+                Att deploya ett projekt från exempevis GitHub är enkelt. Från startsidan, när man är inloggad, trycker man på "Add New..." och väljer "Project".
+                Därefter väljer man det repo som man vill publicera och eventuellt redigerar build-inställningar om det behövs. Sen trycker man på "Deploy" och webbplatsen byggs.
+            </p>
+        </div>
     </main>
-    <footer>
+    <footer class="has-background-grey-lighter has-text-centered p-4">
         <p>Laborationsuppgift för kursen DT193G, Fullstack-utveckling med ramverk</p>
         <p>2024 Emma Ådahl Görling</p>
     </footer>
